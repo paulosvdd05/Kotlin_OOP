@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button
+        button.setOnClickListener{
+            textView.text = editText.text
+        }
     }
 }
