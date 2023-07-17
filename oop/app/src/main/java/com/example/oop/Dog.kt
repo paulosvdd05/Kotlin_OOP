@@ -1,8 +1,7 @@
 package com.example.oop
 
-class Dog constructor(
-    private val owner: Human
-) {
+class Dog {
+    var owner = Human()
     var name : String? = null
 
     fun sayHi(){
