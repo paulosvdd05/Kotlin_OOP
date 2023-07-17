@@ -3,9 +3,9 @@ package com.example.oop
 
 fun main(){
     val motor = Motor()
-    motor.ligado = true
+    motor.ligar()
     println(motor.ligado)
-    motor.ligado = false
+    motor.desligar()
     println(motor.ligado)
 
     val carro = Carro()
