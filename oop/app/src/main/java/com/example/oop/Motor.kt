@@ -9,7 +9,7 @@ class Motor {
     fun desligar(){
         ligado = false
     }
-    fun status() : Boolean {
-        return  ligado
+    fun status() : String {
+        return  if(ligado) "Ligado" else "Desligado"
     }
 }
