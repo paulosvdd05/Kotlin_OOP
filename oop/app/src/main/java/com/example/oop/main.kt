@@ -4,10 +4,8 @@ package com.example.oop
 fun main(){
     val motor = Motor()
     motor.ligar()
-    println(motor.ligado)
+    println("Motor esta ${motor.status()}")
     motor.desligar()
-    println(motor.ligado)
+    println("Motor esta ${motor.status()}")
 
-    val carro = Carro()
-    carro.anda()
 }
