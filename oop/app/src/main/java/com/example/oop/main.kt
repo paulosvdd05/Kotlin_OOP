@@ -8,4 +8,9 @@ fun main(){
     dog.owner = paulo
     dog.name = "Linux"
     dog.sayHi()
+
+    val lucas = Human()
+    lucas.name = "Lucas"
+    dog.owner = lucas
+    dog.sayHi()
 }
