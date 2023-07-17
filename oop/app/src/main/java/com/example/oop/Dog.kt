@@ -6,6 +6,6 @@ class Dog constructor(
     var name : String? = null
 
     fun sayHi(){
-        println("Hi $ownerName, my name is $name")
+        println("Hi my name is $name, and my owner is $ownerName")
     }
 }
