@@ -2,7 +2,7 @@ package com.example.oop
 
 
 fun main(){
-
-
-    println("Ola $name")
+    val dog = Dog()
+    dog.name = "Linux"
+    println("Ola ${dog.name}")
 }
