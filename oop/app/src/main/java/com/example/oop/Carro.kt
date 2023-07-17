@@ -8,17 +8,24 @@ class Carro constructor(
 
 
     fun ligar(){
+        println("Ligando carro...")
         motor.ligar()
     }
     fun desligar(){
+        println("Desligando carro...")
         motor.desligar()
     }
     fun anda(){
-        if(motor.estaLigado()){
-        println("Carro andando: Vruum Vruuuumm!")
-        }else {
-            println("Liga o carro primeiro, neh!")
+        when{
+            !motor.estaLigado() -> println("Liga o carro primeiro, neh!")
+            !motor.temCombustivel() -> println("Coloca combustivel antes, neh!")
+            else -> {
+                println("Carro andando: Vruum Vruuuumm!")
+                motor.gastandoCombustivel()
+            }
         }
+
+
     }
 
     fun freia(){
