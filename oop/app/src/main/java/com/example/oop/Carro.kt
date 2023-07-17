@@ -4,6 +4,10 @@ class Carro {
 
     var cor: String? = null
 
+
+    fun partida(){
+
+    }
     fun anda(){
         println("Carro andando: Vruum Vruuuumm!")
     }
