@@ -1,13 +1,15 @@
 package com.example.oop
 
-class Motor {
+class MotorCombustao {
 
     private var ligado: Boolean = false
     private var nivelCombustivel: Int = 2
     fun ligar(){
+        println("Ligando motor...")
         ligado = true
     }
     fun desligar(){
+        println("Desligando o motor...")
         ligado = false
     }
     fun estaLigado() : Boolean {

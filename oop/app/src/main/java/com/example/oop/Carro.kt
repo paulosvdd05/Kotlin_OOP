@@ -1,7 +1,7 @@
 package com.example.oop
 
 class Carro constructor(
-    private val motor: Motor
+    private val motorCombustao: MotorCombustao
 ) {
 
     var cor: String? = null
@@ -9,19 +9,24 @@ class Carro constructor(
 
     fun ligar(){
         println("Ligando carro...")
-        motor.ligar()
+        motorCombustao.ligar()
     }
     fun desligar(){
         println("Desligando carro...")
-        motor.desligar()
+        motorCombustao.desligar()
     }
     fun anda(){
         when{
-            !motor.estaLigado() -> println("Liga o carro primeiro, neh!")
-            !motor.temCombustivel() -> println("Coloca combustivel antes, neh!")
+            !motorCombustao.estaLigado() -> println("Liga o carro primeiro, neh!")
+            !motorCombustao.temCombustivel() -> {
+                println("Coloca combustivel antes, neh!")
+                motorCombustao.desligar()
+
+            }
+
             else -> {
                 println("Carro andando: Vruum Vruuuumm!")
-                motor.gastandoCombustivel()
+                motorCombustao.gastandoCombustivel()
             }
         }
 
