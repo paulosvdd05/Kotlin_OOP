@@ -19,14 +19,21 @@ class Carro constructor(
         when{
             !motor.estaLigado() -> println("Liga o carro primeiro, neh!")
             !motor.temAutonomia() -> {
-                println("Coloca combustivel antes, neh!")
-                motor.desligar()
+                when(motor){
+                    is MotorEletrico -> println("Tem que carregar neh!?")
+                    is MotorCombustao -> println("Bota combustivel neh!?")
+                }
+                desligar()
 
             }
 
             else -> {
-                println("Carro andando: Vruum Vruuuumm!")
+
                 motor.gastando()
+                when(motor){
+                    is MotorEletrico -> println("Carro andando")
+                    is MotorCombustao -> println("Carro andando: Vruum Vruuuumm!")
+                }
             }
         }
 
