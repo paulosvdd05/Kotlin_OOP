@@ -1,6 +1,6 @@
 package com.example.oop
 
-open class Motor {
+abstract class Motor {
     private var ligado: Boolean = false
 
     fun ligar(){
@@ -15,9 +15,7 @@ open class Motor {
         return  ligado
     }
 
-    fun temAutonomia(): Boolean {
-        return true
-    }
+    abstract fun temAutonomia(): Boolean
 
     fun gastando(){
 
