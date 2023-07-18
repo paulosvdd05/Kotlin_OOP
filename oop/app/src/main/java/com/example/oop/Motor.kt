@@ -17,9 +17,7 @@ abstract class Motor {
 
     abstract fun temAutonomia(): Boolean
 
-    fun gastando(){
-
-    }
+    abstract fun gastando()
 
 
 }
